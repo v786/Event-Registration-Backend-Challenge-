@@ -12,11 +12,11 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <hr>
       <div class="panel panel-default">
-        <div class="panel-heading">List Of All Tests</div>
+        <div class="panel-heading">List Of All Events</div>
         <div class="panel-body">
           <div class="col-md-12 well well-sm">
           Test Name
-          <a href="exam.php" type="button" class="btn btn-default" style="float: right;">Appear</a>
+          <a href="exam.php" type="button" class="btn btn-default" style="float: right;">View Details</a>
           </div>
         </div>
       </div>

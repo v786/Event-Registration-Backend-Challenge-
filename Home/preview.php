@@ -7,9 +7,14 @@ if(isset($_POST['eventPreview'])){
   $mobile = $_POST['mobile'];
   $mail = $_POST['mail'];
   //$card = $_POST['card'];
-  //$target_file = './'
-  //(move_uploaded_file($_FILES["card"]["tmp_name"], $target_file);
+  $target_file = 'upload/';
   $card = basename($_FILES['card']['name']);
+  if(move_uploaded_file($_FILES["card"]["tmp_name"], $target_file.$card)){
+    shout('Sucess');
+  }
+  else{
+    shout('failure');
+  }
   $type = $_POST['type'];
   $tickets = $_POST['tickets'];
   $inq = array(NULL, $name, $mobile, $mail, $card, $type, $tickets);
@@ -71,6 +76,7 @@ if(isset($_POST['eventPreview'])){
               <label>
                 <input type="hidden" name="card" value="<?=$card?>">
                 ID Card: <?=$inq[4]?>
+                <img src="upload/<?=$inq[4]?>">
               </label>
             </div>
           </div>
