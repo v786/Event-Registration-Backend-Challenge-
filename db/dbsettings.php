@@ -10,6 +10,6 @@ $dbusername="root";
 $dbpassword="";
 
 //database name of the online Examination system
-$dbname="oes";
+$dbname="EvenRegister";
 
 ?>

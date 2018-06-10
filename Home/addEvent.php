@@ -1,6 +1,6 @@
-  <?php include "head.php" ;?>
+<?php include "head.php" ;?>
 
-    <?php include "navbar.php"; ?>
+<?php include "navbar.php"; ?>
    
 <div class="container-fluid text-center">    
   <div class="row content">
@@ -12,7 +12,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <hr>
 
-      <form method="post" action="addEvent.php" enctype="multipart/form-data">
+      <form method="post" action="preview.php" enctype="multipart/form-data">
         <br>    
         <div class="input-group">
           <span class="input-group-addon">Name</span>
@@ -30,13 +30,13 @@
         </div>
         <br>
         <div class="input-group">
-          <span class="input-group-addon">ID-Card</span>
-          <input id="msg" type="text" class="form-control" name="card" placeholder="Upload Info">
+          <span class="input-group-addon">ID-Card</span> 
+          <input class="form-control" type="file" name="card" id="card">
         </div>
         <br>
         <div class="input-group">
           <span class="input-group-addon">Event Type</span>
-          <select name="type" class="form-control">
+          <select class="form-control" name="type">
             <option value="Self">Self</option>
             <option value="Group">Group</option>
             <option value="Corporate">Corporate</option>
@@ -49,7 +49,7 @@
           <input id="msg" type="text" class="form-control" name="tickets" placeholder="Event Info">
         </div>
         <br>
-        <button type="submit" class="btn btn-primary" name="addEvent">Add Event</button>
+        <button type="submit" class="btn btn-primary" name="eventPreview">Add Event</button>
       </form>
     </div>
     <div class="col-sm-2 sidenav">
@@ -67,25 +67,3 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
 <?php include "footer.php"?>
-<?php
-  include "../db/dbconn.php";
-  include "../db/lib.php"; 
-  if(isset($_POST['addEvent'])){
-    $name = $_POST['name'];
-    $mobile = $_POST['mobile'];
-    $mail = $_POST['mail'];
-    $card = $_POST['card'];
-    $type = $_POST['type'];
-    $tickets = $_POST['tickets'];
-    $inq = "INSERT into student VALUES (NULL,'$name','$mobile','$mail', '$card', $type, $tickets)";
-    $query = mysqli_query($dbcon,$inq);
-    if($query){
-      shout("Event Added");
-      loc("addEvent.php");
-    }
-    else{
-      shout("Error $ques");
-      loc("addEvent.php");
-    }
-  }
-?>
