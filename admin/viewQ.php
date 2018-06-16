@@ -14,14 +14,15 @@
       <table class="table table-bordered table-stripped table-hover" id="sub">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Branch</th>
+            <th>Host Name</th>
+            <th>Contact</th>
+            <th>Details</th>
           </tr>
         </thead>
         <tbody>
         <?php 
           include "../db/dbconn.php";
-          $query = "SELECT * FROM Subject";
+          $query = "SELECT * FROM EventDetails";
           $run = mysqli_query($dbcon, $query);
           while ($row = mysqli_fetch_array($run)) {
             $name = $row[1];
@@ -30,6 +31,7 @@
           <tr>
             <td><?=$name?></td>
             <td><?= $password ?></td>
+            <td><a href="#">GO</a></td>
           </tr>
           <? } ?>
         </tbody>

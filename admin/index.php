@@ -1,6 +1,13 @@
-  <?php include "head.php" ;?>
+<?php
+session_start();
+include "../db/dbconn.php";
+include "../db/lib.php"; 
 
-    <?php include "navbar.php"; ?>
+?>
+
+<?php include "head.php" ;?>
+
+<?php include "navbar.php"; ?>
    
 <div class="container-fluid text-center">    
   <div class="row content">
