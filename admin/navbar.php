@@ -15,7 +15,7 @@
         <li><a href="addQ.php">Add New Question</a></li>
         <li><a href="addStudent.php">Add Student</a></li>
         <li><a href="viewStudent.php">View Students</a></li>
-        <li><a href="viewQ.php">View Question</a></li>
+        <li><a href="user-details.php">View Users</a></li>
         <li><a href="#">Help</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

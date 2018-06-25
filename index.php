@@ -1,4 +1,4 @@
 <?php 
-include "db/lib.php"; 
-loc("Home/index.php");
+    include "db/lib.php"; 
+    loc("Home/index.php");
 ?>
